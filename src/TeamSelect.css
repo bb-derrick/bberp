@@ -1,5 +1,17 @@
-.TeamSelect {
+.TeamSelectContainer {
     border: 1px solid aqua;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.TeamContainer {
+    height: 10vh;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 10px 0;
+    align-items: center;
 }
 
 .TeamName {

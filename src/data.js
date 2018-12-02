@@ -35,20 +35,20 @@ export const allData = {
   ],
   teams : [
     {
-      teamName: "Red",
+      teamName: "red",
       teamNumber: 0
     },
     {
-      teamName: "Blue",
+      teamName: "blue",
       teamNumber: 1
     },
     {
-      teamName: "Yellow",
+      teamName: "yellow",
       teamNumber: 2
     },
     {
-      teamName: "Green",
+      teamName: "green",
       teamNumber: 3
-    },
+    }
   ]
 };
