@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import firebase from './firebase';
 
 class Team extends Component {
 
     constructor() {
         super();
         this.state = {
-            team: ""
+            team: []
         }
     }
 
@@ -18,7 +19,27 @@ class Team extends Component {
     }
 
     componentDidMount() {
-        
+
+        const staffRefs = firebase.database().ref();
+        console.log('staffRefs: ', staffRefs);
+        staffRefs.child('staff/9szgam4cxDbpW6cIh3Yt').set(
+            {firstName: 'test'
+            });
+        staffRefs.on('value', (snapshot) => {
+            // let staff = snapshot.val();
+            // let newState = [];
+            // for(let person in staff) {
+            //     newState.push({
+            //         firstName: staff[person].firstName,
+            //         lastName: staff[person].lastName,
+            //         company: person.company,
+            //         status,
+            //         team
+            //     })
+            // }
+
+            console.log('snapshot: ', snapshot.val());
+        })
     }
 
     render() {
