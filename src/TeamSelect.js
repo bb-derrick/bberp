@@ -7,20 +7,19 @@ class TeamSelect extends Component {
     console.log(this.props.teams);
   }
 
-    render() {
-        return (
-            <div className="TeamSelectContainer">
-              {this.props.teams.map((team, i) => (
-                  <Link to={`/team/${team.teamName}`} key={i}>
-                      <div className="TeamContainer" key={i}>
-                          <span>{team.teamName}</span>
-                      </div>
-                  </Link>
-                  )
-              )}
-
-            </div>
-        )
+  render() {
+    return (
+        <div className="TeamSelectContainer">
+          {this.props.teams.map((team, i) => (
+              <Link to={`/team/${team.teamName}`} key={i}>
+                  <div className="TeamContainer" key={i}>
+                      <span>{team.teamName}</span>
+                  </div>
+              </Link>
+              )
+          )}
+        </div>
+    )
     }
 }
 
